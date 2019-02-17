@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { RechercheComponent } from './recherche/recherche.component';
+
+
+const routes: Routes = [
+  {path:'',component:RechercheComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
