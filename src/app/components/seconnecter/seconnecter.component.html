@@ -1,0 +1,33 @@
+<header class="masthead text-black">
+<div class="overlay"></div>
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Se Connecter!</h3>
+              <form>
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required #userEmail autofocus>
+                  <label for="inputEmail">Adresse Email</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" #userPwd required>
+                  <label for="inputPassword">Mot De Passe</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="button" value="Sign In" (click)=" seconnecter(userEmail.value,userPwd.value)">Se Connecter</button>
+                <div class="text-center">
+                  <a class="small" routerLink="/MotDepasseOublier">Mot De Passe Oublier ?</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>

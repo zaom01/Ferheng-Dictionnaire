@@ -1,0 +1,45 @@
+<header class="masthead text-white">
+    <div class="overlay"></div>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+             <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Inscription</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required #userdispalyname>
+                <label for="inputUserame">Nom d'utillisateur</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" #userEmail required>
+                <label for="inputEmail">adresse email</label>
+              </div>
+
+              <hr>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" #userPwd required>
+                <label for="inputPassword">Mot de Passe</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                <label for="inputConfirmPassword">Confirmation du mot de passe</label>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="button" value="Sign Up" (click)=" register(userPwd.value,userEmail.value,userdispalyname.value)">Inscription</button>
+              <a class="d-block text-center mt-2 small" href="#" routerLink="/seconnecter" >Se Connecter</a>
+              <hr class="my-4">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
