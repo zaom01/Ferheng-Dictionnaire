@@ -18,7 +18,7 @@ seconnecter(email,password){
   .then(credential => {
     this.ngZone.run(() => {
       console.log('done');
-      this.router.navigate(['Profile' ]);
+      this.router.navigate(['Profile']);
         });
 
 

@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'MotDepasseOublier',component:MotDepasseOublierComponent, canActivate: [SecureinnerpagesGuard]},
   {path:'verifieremail',component:VerifieremailComponent, canActivate: [SecureinnerpagesGuard]},
   {path:'Profile',component:ProfileComponent,canActivate: [AuthGuard]},
-  {path:'Mot',component:MotComponent},
+  {path:'Mot/:kurde',component:MotComponent},
 ];
 
 @NgModule({

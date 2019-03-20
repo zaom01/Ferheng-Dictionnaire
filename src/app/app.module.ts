@@ -21,8 +21,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import * as firebase from 'firebase/app';
 
 
+firebase.initializeApp(environment.firebase);
 
 
 
@@ -44,9 +47,13 @@ import { AuthService } from "./shared/services/auth.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

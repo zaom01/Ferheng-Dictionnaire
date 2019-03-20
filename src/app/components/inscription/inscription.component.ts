@@ -22,6 +22,7 @@ export class InscriptionComponent implements OnInit {
     displayName: '',
     photoURL: '',
 
+
   };
   errorMessage = '';
   constructor(
@@ -35,9 +36,10 @@ export class InscriptionComponent implements OnInit {
         this.userInfo.displayName=displayname;
         this.userInfo.email=email;
         this.userInfo.uid = user.user.uid;
+
         user.user.updateProfile({
           displayName: this.userInfo.displayName,
-          photoURL: ''
+          photoURL: '',
         }).then(() => {
           // Update successful. Add the user to ..
         }).catch(function (error) {

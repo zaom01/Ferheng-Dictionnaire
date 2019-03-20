@@ -12,13 +12,14 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-   userData: User = {
-     uid: '',
-     email: '',
-     displayName: '',
-     photoURL: '',
+  userData: User = {
+    uid: '',
+    email: '',
+    displayName: '',
+    photoURL: '',
 
-   };; // Save logged in user data
+
+ }; // Save logged in user data
 
 
   constructor(
@@ -32,7 +33,8 @@ export class AuthService {
         logged in and setting up null when logged out */
         this.afAuth.authState.subscribe(user => {
           if (user) {
-            this.userData = user;
+            this.userData=user;
+            console.log(user);
             localStorage.setItem('user', JSON.stringify(this.userData));
             JSON.parse(localStorage.getItem('user'));
           } else {
@@ -62,7 +64,7 @@ export class AuthService {
        .then(credentials => {
          localStorage.setItem(
            'currentUser',
-           JSON.stringify(credentials.user.displayName)
+           JSON.stringify(credentials.user.displayName),
          );
          resolve();
        })
@@ -148,6 +150,7 @@ export class AuthService {
      email: user.email,
      displayName: user.displayName,
      photoURL: user.photoURL,
+  
 
    }
    return userRef.set(userData, {
