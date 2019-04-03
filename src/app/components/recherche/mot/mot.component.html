@@ -6,18 +6,23 @@
 <div class="lines"></div>
 
 <ul class="list">
-  <li>{{ wordData.Kurde }} <i class="fas fa-volume-up"></i></li>
+  <li>{{ wordData.Kurde }} <button (click)="playTrack(wordData.pro)"><i class="fas fa-volume-up"></i></button></li>
   <li>Turquie:</li>
   <li>{{ wordData.Turquie }}</li>
   <li>Iran:</li>
   <li>{{ wordData.Iran }}</li>
   <li>Syrie:</li>
   <li>{{ wordData.Syrie }}</li>
-  <li>Iraque:</li>
+  <li>Irak:</li>
   <li>{{ wordData.Irak }}</li>
+  <li>{{(result) ? result: 'Pas de Phrase'}}</li>
+  <li><input type="text" id="inputPhrase" placeholder="Placer les mots dans l'ordre" #verif></li>
+  <li>&nbsp;&nbsp;</li>
+  <li><button class="btn btn-lg btn-primary btn-block text-uppercase" type="button" value="Verifier" (click)=" verifier(verif.value)">Verifier</button>
+</li>
   <li>&nbsp;&nbsp;</li>
   <li>&nbsp;</li>
-  <li></li>
+  <li>&nbsp;&nbsp;</li>
   </ul>
     <div>
   <i class="fas fa-equals fa-5x"></i>

@@ -8,6 +8,8 @@ import { MotDepasseOublierComponent } from './components/mot-depasse-oublier/mot
 import { VerifieremailComponent } from './components/verifieremail/verifieremail.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MotComponent } from './components/recherche/mot/mot.component';
+import { BaseMotCRUDComponent } from './components/base-mot-crud/base-mot-crud.component';
+
 
 import { AuthGuard } from "./shared/guard/auth.guard";
 import { SecureinnerpagesGuard } from "./shared/guard/secureinnerpages.guard";
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path:'MotDepasseOublier',component:MotDepasseOublierComponent, canActivate: [SecureinnerpagesGuard]},
   {path:'verifieremail',component:VerifieremailComponent, canActivate: [SecureinnerpagesGuard]},
   {path:'Profile',component:ProfileComponent,canActivate: [AuthGuard]},
+  {path:'BaseMotCRUD',component:BaseMotCRUDComponent,canActivate: [AuthGuard]},
   {path:'Mot/:kurde',component:MotComponent},
+
 ];
 
 @NgModule({

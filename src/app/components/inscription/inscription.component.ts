@@ -57,7 +57,7 @@ export class InscriptionComponent implements OnInit {
 
         });
         this.authService.logout();
-        this.router.navigate(['/verifieremail']);
+        this.router.navigate(['verifieremail']);
         this.authService.SendVerificationMail();
         this.authService.SetUserData(user);
 

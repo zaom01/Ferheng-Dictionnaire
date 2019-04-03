@@ -12,7 +12,7 @@ export class MotDepasseOublierComponent implements OnInit {
   constructor(
     public authService: AuthService,private router: Router,public ngZone: NgZone
   ) { }
-  resetemail(email,password){
+  resetemail(email){
     firebase.auth().sendPasswordResetEmail(email)
     .then(credential => {
       this.ngZone.run(() => {

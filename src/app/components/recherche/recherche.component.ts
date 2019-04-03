@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./recherche.component.css']
 })
 export class RechercheComponent implements OnInit {
-  private wordDatafr: any;
-    private wordData: any;
+  public wordDatafr: any;
+    public wordData: any;
     private wordList: any[];
 
   constructor(

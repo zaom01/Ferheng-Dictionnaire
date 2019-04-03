@@ -18,11 +18,16 @@ import { MotComponent } from './components/recherche/mot/mot.component';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as firebase from 'firebase/app';
+import { BaseMotCRUDComponent } from './components/base-mot-crud/base-mot-crud.component';
+import { DropZoneDirective } from './components/base-mot-crud/drop-zone.directive';
+
+import { FileSizePipe } from './components/base-mot-crud/file-size.pipe';
 
 
 firebase.initializeApp(environment.firebase);
@@ -42,7 +47,10 @@ firebase.initializeApp(environment.firebase);
     MotDepasseOublierComponent,
     VerifieremailComponent,
     ProfileComponent,
-    MotComponent
+    MotComponent,
+    BaseMotCRUDComponent,
+    DropZoneDirective,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,
@@ -52,6 +60,8 @@ firebase.initializeApp(environment.firebase);
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireStorageModule
+
 
 
   ],
